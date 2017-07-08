@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+ <head>
+   <meta charset="utf-8">
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+   <title></title>
+   <style media="screen">
+    .div{
+      height: 100px;
+      background-color: red;
+    }
+    .expand{
+      height:200px;
+    }
+    .blue{
+      background-color: blue;
+    }
+   </style>
+ </head>
+ <body ng-controller="ctrl">
+   <div class="div" ng-class="{expand:isClicked, blue: isClicked}" ng-click="doTheThing()">
+   </div>
+   <input type="text" ng-model="myInput" name="" value="">
+
+   <div class="div" ng-style="myStyle" ng-click="myStyle={backgroundColor: 'blue'}"></div>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.js"></script>
+ <script src="app.js"></script>
+ <script src="ctrl.js" charset="utf-8"></script>
+</body>
+</html>
